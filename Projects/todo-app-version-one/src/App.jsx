@@ -1,14 +1,26 @@
 import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
-import TodoItem1 from "./components/TodoItem1";
-import TodoItem2 from "./components/TodoItem2";
+import Items from "./components/Items";
+
 function App() {
   
+      let allItems = [{
+        name:"Assignment",
+        date:"10/08/2024"
+      },{
+        name:"Project",
+        date:"12/08/2024"
+      },
+      {
+        name:"Exam",
+        date:"15/08/2024"
+      }]
+
       return (<center class='todo-container'>
         <AppName/>
         <AddTodo/>
-        <TodoItem1/>
-        <TodoItem2/>
+        <Items allItems={allItems}></Items>
+        
        
 
      
