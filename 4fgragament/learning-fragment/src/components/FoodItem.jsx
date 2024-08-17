@@ -1,14 +1,15 @@
 import styles from "./FoodItem.module.css"
-let FoodItem = ({ foodItem }) => {
+let FoodItem = ({ foodItem ,handleBuyButton}) => {
 
-    const handeleBuyButtonclick = (foodItem) => {
-        alert(`You bought ${foodItem}`)
-        // Add logic to update the cart state here
-    }
+    // const handeleBuyButtonclick = (e) => {
+    //     console.log(e);
+    //     alert(`You bought ${foodItem}`)
+    //     // Add logic to update the cart state here
+    // }
     //let {foodItem }= props
 
     return (<li className='list-group-item'>{foodItem}
-        <button onClick={() => handeleBuyButtonclick(foodItem)} className={`${styles.button} btn btn-primary`}>Buy</button>
+        <button onClick={handleBuyButton} className={`${styles.button} btn btn-primary`}>Buy</button>
     </li>
 
     );
