@@ -1,5 +1,5 @@
 import styles from "./FoodItem.module.css"
-let FoodItem = ({ foodItem ,handleBuyButton}) => {
+let FoodItem = ({ foodItem,bought,handleBuyButton}) => {
 
     // const handeleBuyButtonclick = (e) => {
     //     console.log(e);
@@ -8,7 +8,7 @@ let FoodItem = ({ foodItem ,handleBuyButton}) => {
     // }
     //let {foodItem }= props
 
-    return (<li className={`list-group-item ${bought && 'actvie'}`}>{foodItem}
+    return (<li className={`list-group-item ${bought && "active"}`}>{foodItem}
         <button onClick={handleBuyButton} className={`${styles.button} btn btn-primary`}>Buy</button>
     </li>
 
