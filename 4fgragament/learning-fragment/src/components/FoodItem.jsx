@@ -8,7 +8,7 @@ let FoodItem = ({ foodItem ,handleBuyButton}) => {
     // }
     //let {foodItem }= props
 
-    return (<li className='list-group-item'>{foodItem}
+    return (<li className={`list-group-item ${bought && 'actvie'}`}>{foodItem}
         <button onClick={handleBuyButton} className={`${styles.button} btn btn-primary`}>Buy</button>
     </li>
 
