@@ -1,11 +1,11 @@
 import TodoItem from "./TodoItem"
 
-let Items = ({allItems})=>{
+let Items = ({ allItems, onDeleteClick }) => {
 
     return <>
-        {allItems.map((item)=>  <TodoItem todoName={item.name} todoDate={item.date}/>
-    )}
-      
+        {allItems.map((item) => <TodoItem key={item.name} todoName={item.name} todoDate={item.date} onDeleteClick={onDeleteClick} />
+        )}
+
     </>
 }
 

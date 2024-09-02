@@ -26,15 +26,18 @@ function App() {
 
   }
 
+  const onDeleteHandle = (todoItemName) => {
+
+    const newItems = allItems.filter(item => item.name !== todoItemName)
+    setAllItems(newItems)
+
+  }
+
   return (<center class='todo-container'>
     <AppName />
     <AddTodo onNewItem={newItemHandle} />
-    {allItems.length === 0 && <WelcomeMessage />}
-    <Items allItems={allItems}></Items>
-
-
-
-
+    {allItems.length === 0 && <WelcomeMessage></WelcomeMessage>}
+    <Items allItems={allItems} onDeleteClick={onDeleteHandle}></Items>
   </center>);
 
 
