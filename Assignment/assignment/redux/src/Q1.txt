@@ -1,0 +1,21 @@
+
+Q-1: What is Redux?
+ANS:Redux is an open-source JavaScript library used to manage application state. React uses Redux for building the user interface. It was first introduced by Dan Abramov and Andrew Clark in 2015.
+
+React Redux is the official React binding for Redux. It allows React components to read data from a Redux Store, and dispatch Actions to the Store to update data. Redux helps apps to scale by providing a sensible way to manage state through a unidirectional data flow model. React Redux is conceptually simple. It subscribes to the Redux store, checks to see if the data which your component wants have changed, and re-renders your component.
+
+Q-2:What is Redux Thunk used for?
+ANS:Thunk is a logical concept in programming where you deal with a function that is primarily used to delay the calculation or evaluation of any operation.
+
+Redux Thunk acts as a middleware that will return you a function instead of an object while calling through the action creators. The returned function receives the dispatch method from the store and then later it is used to dispatch synchronously inside the body of function once the asynchronous actions have been completed. Let's move ahead with Redux Thunk and talk more about its installation and usage.
+
+Q-3:What is Pure Component? When to use Pure Component over Component?
+ANS:ReactJS has provided us with a Pure Component. If we extend a class with Pure Component, there is no need for the shouldComponentUpdate() lifecycle method. ReactJS Pure Component Class compares the current state and props with new props and states to decide whether the React component should re-render itself or not.
+
+when a component could re-render even if it had the same props and state .
+
+Q-4:What is the second argument that can optionally be passed tosetState and what is
+its purpose?
+ANS:The second argument that can optionally be passed to setState is a callback function which gets called immediately after the setState is completed and the components get re-rendered. 
+
+If you want your program to update the value of a state using setState and then perform certain actions on the updated value of the state then you must specify those actions in a function which should be the second argument of the setState. If we do not do so then those actions will be performed on the previous value of state because of the asynchronous nature of setState.
